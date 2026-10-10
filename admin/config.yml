@@ -1,0 +1,19 @@
+
+backend:
+  name: github
+  repo: Atayee786-tech/mustafa-personal-web
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "articles"
+    label: "مقاله‌ها"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "عنوان", name: "title", widget: "string" }
+      - { label: "متن مقاله", name: "body", widget: "markdown" }
+      - { label: "عکس", name: "image", widget: "image", required: false }
